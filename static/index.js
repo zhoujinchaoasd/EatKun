@@ -121,7 +121,7 @@ function gameInit() {
 function gameRestart() {
     _gameBBList = [];
     _gameBBListIndex = 0;
-    _gameScore = 0;
+    _gameScore = 999;
     _gameOver = false;
     _gameStart = false;
     _gameTimeNum = 20;
@@ -304,7 +304,7 @@ function showWelcomeLayer() {
 function showGameScoreLayer() {
     let l = document.getElementById('GameScoreLayer');
     let c = document.getElementById(_gameBBList[_gameBBListIndex - 1].id).className.match(_ttreg)[1];
-    l.className = 999.className.replace(/bgc\d/, 'bgc' + c);
+    l.className = .className.replace(/bgc\d/, 'bgc' + c);
     document.getElementById('GameScoreLayer-text').innerHTML = shareText(_gameScore);
     let score_text = '得分&nbsp;&nbsp;';
     score_text += deviation_time < 23000 ? _gameScore : "<span style='color:red;'>" + _gameScore + "</span>";
